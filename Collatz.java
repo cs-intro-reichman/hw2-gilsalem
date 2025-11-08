@@ -7,31 +7,28 @@ public class Collatz {
             int newnum = i;
             int count1 = 0;
 
-            // אם במצב verbose – נדפיס את המספר ההתחלתי
             if (mood.equals("v")) {
                 System.out.print(i + " ");
             }
 
-            // נמשיך לחשב עד שמגיעים ל-1
-            while (newnum != 1) {
+            // נריץ לפחות פעם אחת (גם אם seed=1)
+            do {
                 if (newnum % 2 == 0) {
                     newnum = newnum / 2;
                 } else {
-                    newnum = (3 * newnum) + 1;
+                    newnum = 3 * newnum + 1;
                 }
                 count1++;
                 if (mood.equals("v")) {
-                    System.out.print(newnum + " "); // נוסיף רווח אחרי כל מספר
+                    System.out.print(newnum + " ");
                 }
-            }
+            } while (newnum != 1);
 
-            // הדפסה של מספר הצעדים בסוף הרצף
             if (mood.equals("v")) {
                 System.out.println("(" + count1 + ")");
             }
         }
 
-        // הודעה מסכמת
         System.out.println("Every one of the first " + n + " hailstone sequences reached 1.");
     }
 }
