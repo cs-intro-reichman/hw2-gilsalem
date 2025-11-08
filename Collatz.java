@@ -5,23 +5,23 @@ public class Collatz {
 
         for (int i = 1; i <= n; i++) {
             int newnum = i;
-            int count1 = 0;
+            int count1 = 1;  
 
             if (mood.equals("v")) {
                 System.out.print(i + " ");
             }
 
-            // נריץ לפחות פעם אחת (גם אם seed=1)
             do {
                 if (newnum % 2 == 0) {
                     newnum = newnum / 2;
                 } else {
                     newnum = 3 * newnum + 1;
                 }
-                count1++;
+
                 if (mood.equals("v")) {
                     System.out.print(newnum + " ");
                 }
+
             } while (newnum != 1);
 
             if (mood.equals("v")) {
