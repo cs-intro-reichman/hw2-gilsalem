@@ -5,7 +5,7 @@ public class Collatz {
 
         for (int i = 1; i <= n; i++) {
             int newnum = i;
-            int count1 = 1;  
+            int count1 = 1; 
 
             if (mood.equals("v")) {
                 System.out.print(i + " ");
@@ -18,11 +18,18 @@ public class Collatz {
                     newnum = 3 * newnum + 1;
                 }
 
-                count1++; 
+                count1++;
 
                 if (mood.equals("v")) {
                     System.out.print(newnum + " ");
                 }
+            }
+
+            if (i == 1) {
+                if (mood.equals("v")) {
+                    System.out.print("4 2 1 ");
+                }
+                count1 = 4;
             }
 
             if (mood.equals("v")) {
