@@ -2,5 +2,42 @@
 public  class  TestRandom {
 	public static void main(String[]  args) {
 	    // Replace this comment with your code
+		int n=Integer.parseInt((args[0]));
+		int count1=0,count2=0;
+		for(int i=0;i<n;i++)
+		{
+		   double randomNumber = Math.random();
+			
+			if(randomNumber >0.5)
+			{
+				count1++;
+			}
+			 if(randomNumber<=0.5)
+			{
+				count2++;
+			}
+		}
+		if (count2==0) 
+		{
+		System.out.println(">0.5: "+count1);
+		System.out.println("<= 0.5: "+count2);
+		}
+		else 
+		{
+		double ratio = (double) count1 / count2;
+		System.out.println(">0.5: "+count1);
+		System.out.println("<= 0.5: "+count2);
+		System.out.println("Ratio: "+ratio);
+		}
+
+
+
+
+
+
+
+
+
+		
 	}
 }
