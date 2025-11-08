@@ -11,18 +11,19 @@ public class Collatz {
                 System.out.print(i + " ");
             }
 
-            do {
+            while (newnum != 1) {
                 if (newnum % 2 == 0) {
                     newnum = newnum / 2;
                 } else {
                     newnum = 3 * newnum + 1;
                 }
 
+                count1++; 
+
                 if (mood.equals("v")) {
                     System.out.print(newnum + " ");
                 }
-
-            } while (newnum != 1);
+            }
 
             if (mood.equals("v")) {
                 System.out.println("(" + count1 + ")");
